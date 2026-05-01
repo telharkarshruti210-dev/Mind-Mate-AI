@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate AI - Wellness Hub</title>
+    <link rel="icon" href="/static/image/logo.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="chat-body">
+
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-content">
+            <div class="menu-header">
+                <h3>Wellness Hub</h3>
+                <span class="close-btn" onclick="toggleMenu()">&times;</span>
+            </div>
+
+            <div class="activities-grid">
+                
+                <div class="activity-card" onclick="showActivity('mood')">
+                    <div class="icon">📊</div>
+                    <span>Mood Tracker</span>
+                </div>
+                <div class="activity-card" onclick="showActivity('journal')">
+                    <div class="icon">✍️</div>
+                    <span>Journaling</span>
+                </div>
+
+                <div class="activity-card" onclick="showActivity('quiz')">
+                    <div class="icon">🧠</div>
+                    <span>Mind Quiz</span>
+                </div>
+                <div class="activity-card" onclick="showActivity('relax')">
+                    <div class="icon">🌬️</div>
+                    <span>Relaxation</span>
+                </div>
+
+                <div class="activity-card" onclick="showActivity('game')">
+                    <div class="icon">🎮</div>
+                    <span>CalmSphere</span>
+                </div>
+                <div class="activity-card" onclick="showActivity('personality')">
+                    <div class="icon">📝</div>
+                    <span>Personality</span>
+                </div>
+
+                <div class="activity-card" onclick="showActivity('gratitude')">
+                    <div class="icon">✨</div>
+                    <span>Gratitude Jar</span>
+                </div>
+                <div class="activity-card" onclick="showActivity('pomodoro')">
+                    <div class="icon">⏱️</div>
+                    <span>Focus Timer</span>
+                </div>
+            </div>
+
+            <div id="activityDetails" class="details-view">
+                <p style="text-align:center; color:#888; margin-top:50px;">
+                    Select an activity above to begin
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-info">
+                <img src="/static/assets/ai.jpg" class="avatar" alt="Nova">
+                <div>
+                    <h3>Nova</h3>
+                    <p class="status">● Online for you</p>
+                </div>
+            </div>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message ai">
+                <div class="text-bubble">
+                <p>Hii! I am Nova, Take a moment for yourself, reflect on your day, and find your inner balance.</p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                <button id="sendBtn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="fullScreenOverlay" class="full-overlay">
+        <div class="overlay-content">
+            <button class="close-overlay" onclick="closeOverlay()">×</button>
+            <div id="activityFullArea"></div> 
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

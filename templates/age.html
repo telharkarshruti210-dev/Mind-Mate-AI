@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Age - MindMate</title>
+    <link rel="icon" href="/static/image/logo.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="age-body">
+    <div class="age-container">
+        <h2>How old are you?</h2>
+        <p>We need this information to make your experience more relevant & safe.</p>
+        
+        <div class="age-options">
+            <button class="age-btn" onclick="selectAge(this)">Under 18</button>
+            <button class="age-btn" onclick="selectAge(this)">18-24</button>
+            <button class="age-btn" onclick="selectAge(this)">25-34</button>
+            <button class="age-btn" onclick="selectAge(this)">35-44</button>
+            <button class="age-btn" onclick="selectAge(this)">45-54</button>
+            <button class="age-btn" onclick="selectAge(this)">55-64</button>
+        </div>
+
+        <button id="continueBtn" disabled onclick="goNext()">Next</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
